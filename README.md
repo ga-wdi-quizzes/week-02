@@ -1,4 +1,4 @@
-# Quiz #1
+# Quiz #2
 
 ## Instructions
 
@@ -81,15 +81,28 @@ var pizza = {
 ### Question #5
 
 **Define a function called `doSomething`. It should take one argument, called
-`thingToDo`. When called, thing to do should invoke the function given as an
+`thingToDo`. When called, `doSomething` should invoke the function given as an
 argument. Finally, demonstrate calling `doSomething` with a function.**
 
 Your Answer:
 ```js
 // write code here
+
+// DEFINING THE FUNCTION
 function doSomething(thingToDo) {
   thingToDo(); // call the function passed in, using parenthesis
 }
+
+// CALLING THE FUNCTION
+doSomething(function() { console.log("Inside the callback") })
+
+// OR
+
+function washTheDishes() {
+  console.log("Inside the callback") 
+}
+
+doSomething(washTheDishes);
 ```
 
 ### Question #6
