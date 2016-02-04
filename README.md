@@ -22,6 +22,7 @@ Select all that apply:
 [] Undefined
 [] NaN
 [] Integers
+[] Arrays
 [] Null
 ```
 
@@ -36,9 +37,9 @@ Explain what is a REPL, and why is it important for us as developers and help wi
 
 **Given the Following Array**
 
-var foods = [["apple","banana","strawberry"], ["pizza","fries","hamburger"]];
+var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 
-Create a function that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
+Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
 // write code here
@@ -47,7 +48,7 @@ Create a function that outputs the following string for each piece of fruit in t
 
 **Given the Following Array**
 
-var foods = [["apple","banana","strawberry"], ["pizza","fries","hamburger"]];
+var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 
 How would I go about accessing the string "pizza" in the above array?
 
@@ -79,7 +80,7 @@ Your Answer:
 
 ### Question #7
 
-Define a global variable instructor and set it equal to your Squad Instructor's Name. Then define the same as a local variable.
+Define a global variable instructor and set it equal to your Squad Instructor's Name. Then, define the same as a local variable instead.
 
 Your Answer:
 ```js
@@ -90,14 +91,14 @@ Your Answer:
 
 ### Question #8
 
-What are the differences between calling and referencing a function. Please provide examples of each.
+What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
 
 ```
 ### Question #9
 
-Using the object literal notation, create an object student with properties of name, age, and a method sayHello, that outputs "Hi, my name is [your_name]".
+Using the object literal notation, Define an object called student and give it the properties (your attributes) of name, age, and a method sayHello, that outputs "Hi, my name is [your_name]".
 
 Your Answer:
 ```js
