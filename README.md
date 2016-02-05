@@ -13,7 +13,7 @@ the square brackets (for multiple-choice questions).
 
 ### Question #1
 
-**What of the following are JavaScript Data Types?**
+**What of the following are JavaScript data types?**
 
 Select all that apply:
 ```
@@ -28,29 +28,34 @@ Select all that apply:
 
 ## Question #2
 
-Explain what is a REPL, and why is it important for us as developers and help with debugging?
+What is a REPL, and why is it important for us as developers?
 
 ```text
 
 ```
 ### Question #3
 
-**Given the Following Array**
+**Given the following array:**
 
+```js
 var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
+```
 
-Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
+...create a `for` loop that outputs the following string for each piece of fruit in the console: "I want to eat a [fruit]"
 
 ```js
 // write code here
 ```
+
 ### Question #4
 
-**Given the Following Array**
+**Given the following array:**
 
+```js
 var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
+```
 
-How would I go about accessing the string "pizza" in the above array?
+How would I go about accessing the string "pizza"?
 
 ```js
 // write code here
@@ -60,7 +65,7 @@ How would I go about accessing the string "pizza" in the above array?
 
 ### Question #5
 
-Describe the rules of scope in JavaScript.
+In Javascript, what is "scope" and how does it work?
 
 Your Answer:
 ```text
@@ -69,9 +74,9 @@ Your Answer:
 ### Question #6
 
 Define an object and store it in a variable `pizza`. The object should have 2
-properties: a temperature (set to 70), and a method called `bake`. When called,
+properties: a temperature (set to 70), and a method called "bake". When called,
 this method should set the pizza's temperature to be 300. Note: you may not use
-the variable pizza inside your method.
+the variable `pizza` inside your method.
 
 Your Answer:
 ```js
@@ -80,7 +85,7 @@ Your Answer:
 
 ### Question #7
 
-Define a global variable instructor and set it equal to your Squad Instructor's Name. Then, define the same as a local variable instead.
+Define a global variable `instructor` and set it equal to your squad instructor's name. Then, define a local variable with the same value.
 
 Your Answer:
 ```js
@@ -91,14 +96,14 @@ Your Answer:
 
 ### Question #8
 
-What are the differences between calling and referencing a function? Please provide examples of each.
+What are the differences between "calling" and "referencing" a function? Please provide examples of each.
 
 ```text
 
 ```
 ### Question #9
 
-Using the object literal notation, Define an object called student and give it the properties (your attributes) of name, age, and a method sayHello, that outputs "Hi, my name is [your_name]".
+Using the object literal notation, define an object called `student` and give it the properties `name` and `birthday`, using *your* actual name and birthday. Add a method `sayHello` that outputs "Hi, my name is [your_name]".
 
 Your Answer:
 ```js
