@@ -2,10 +2,9 @@
 
 ## Instructions
 
-1. Fork this repo
-2. Clone your fork
-3. Fill in your answers by writing in the appropriate area, or placing an 'x' in
-the square brackets (for multiple-choice questions).
+1. Fork this repo.
+2. Clone your fork.
+3. Fill in your answers by writing in the appropriate area, or placing an 'x' in the square brackets (for multiple-choice questions).
 4. Add/Commit/Push your changes to Github.
 5. Open a pull request.
 
@@ -17,13 +16,13 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
-[] Undefined
+[X] Strings
+[X] Booleans
+[X] Undefined
 [] NaN
-[] Integers
+[X] Integers
 [] Arrays
-[] Null
+[X] Null
 ```
 
 ## Question #2
@@ -31,8 +30,9 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-
+REPL, stands for "Read-Eval-Print Loop". It's an environment that allows us to run JavaScript code one line at a time. It's especially useful in helping us to experiment and debug our code, testing portions of our code before continuing.
 ```
+
 ### Question #3
 
 **Given the Following Array**
@@ -42,7 +42,9 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+for(var i = 0; i < foods[0].length; i++){
+  console.log("I want to eat a " + foods[0][i]);
+}
 ```
 ### Question #4
 
@@ -53,7 +55,8 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+var pizza = foods[1][0]
+
 ```
 
 ## Scope/Context/Closures
@@ -64,6 +67,10 @@ Describe the rules of scope in JavaScript.
 
 Your Answer:
 ```text
+1. Variables defined without the var keyword are always placed in the global scope.
+2. Variables that are defined using the var keyword are created in the current local scope.
+3. Every function and only functions create a new local scope.
+4. The current scope includes all outer (enclosing) scopes.
 ```
 
 ### Question #6
@@ -75,7 +82,13 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+var pizza = {
+  temperature: 70,
+  bake: function(){
+    this.temperature = 300;
+  }
+}
+
 ```
 
 ### Question #7
@@ -84,7 +97,10 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 
 Your Answer:
 ```js
-// write code here
+// global variable
+instructor = "Becky";
+// local variable
+var instructor = "Becky";
 ```
 
 ## Objects and Functions
@@ -94,7 +110,18 @@ Your Answer:
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
-
+Calling a function is actually invoking that function to be executed immediately, while referencing is just refering to a particular function, for example, when referencing a function during an event listener.
+```
+```js
+Example:
+function sayHello(){
+  console.log("Hello, world!");
+}
+// Calling a Function:
+sayHello();
+// Referencing a Function:
+var button = document.querySelector("button");
+button.addEventListener("click", sayHello);
 ```
 ### Question #9
 
@@ -102,7 +129,13 @@ Using the object literal notation, Define an object called student and give it t
 
 Your Answer:
 ```js
-// write code here
+var student = {
+  name: "Becky",
+  age: 25,
+  sayHello: function(){
+    console.log("Hi, my name is " + this.name);
+  }
+}
 ```
 
 ## Callbacks
@@ -115,5 +148,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[X] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
