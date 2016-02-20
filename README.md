@@ -38,12 +38,7 @@ L- Loop
 
 You can use this in the chrome development tool or sites like repl.it. It reads each line of the code, evaluates it, prints it in the console and then loops it back to the beginning and onto the next line.
 
-It is important to developers bc it helps you find an error by line and gives you details on the type of error with they type of error message. It also shows you the results of your code on the screen. 
-
-
-
-
-
+It is important to developers bc it helps you find an error by line and gives you details on the type of error with they type of error message.
 ```
 ### Question #3
 
@@ -54,7 +49,13 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+//
+var foods = [["apple","banana","strawberry"], ["pizza","fries","hamburger"]];
+var fruit[0];
+forEach(fruit);
+{
+console.log("I want to eat (fruit)");
+}
 ```
 ### Question #4
 
@@ -65,7 +66,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+// foods[1][0];
 ```
 
 ## Scope/Context/Closures
@@ -75,7 +76,9 @@ How would I go about accessing the string "pizza" in the above array?
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+```
+Scope can be either Global or local. Global scope cane be used everywhere but local scope can only be used within the function it is defined in.
+
 ```
 
 ### Question #6
