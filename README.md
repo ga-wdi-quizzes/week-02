@@ -17,20 +17,20 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
-[] Undefined
+[X] Strings
+[X] Booleans
+[X] Undefined **(classified as 'special' data type though not a primary)
 [] NaN
-[] Integers
-[] Arrays
-[] Null
+[X] Integers
+[X] Arrays **(called a 'composite' data type but is not a primary data type. It contains a list of primary data types (Strings, Booleans, Numbers/Integers))
+[X] Null **(classified as 'special' data type though not a primary)
 ```
 
 ## Question #2
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
-```text
+```It stands for "read, evaluate, print, loop." It is a very cool development environment wherein you can type code and see the result in real time. Super helpful if you want to see what you are doing and if it works as you go. Made piece by piece.
 
 ```
 ### Question #3
