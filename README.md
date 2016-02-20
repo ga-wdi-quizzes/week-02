@@ -17,13 +17,13 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
-[] Undefined
+[X] Strings
+[X] Booleans
+[X] Undefined
 [] NaN
-[] Integers
+[X] Integers
 [] Arrays
-[] Null
+[X] Null
 ```
 
 ## Question #2
@@ -84,7 +84,8 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 
 Your Answer:
 ```js
-// write code here
+instructor = Becky; //global variable
+var instructor = Becky;
 ```
 
 ## Objects and Functions
