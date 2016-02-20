@@ -30,7 +30,19 @@ Select all that apply:
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
-```text
+```
+R- Read
+E- Evaluate
+P- Print
+L- Loop
+
+You can use this in the chrome development tool or sites like repl.it. It reads each line of the code, evaluates it, prints it in the console and then loops it back to the beginning and onto the next line.
+
+It is important to developers bc it helps you find an error by line and gives you details on the type of error with they type of error message. It also shows you the results of your code on the screen. 
+
+
+
+
 
 ```
 ### Question #3
