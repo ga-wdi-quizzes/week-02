@@ -17,12 +17,12 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
-[] Undefined
+[X] Strings
+[X] Booleans
+[X] Undefined
 [] NaN
 [] Integers
-[] Arrays
+[X] Arrays
 [] Null
 ```
 
@@ -30,7 +30,8 @@ Select all that apply:
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
-```text
+```
+It stands for read–eval–print loop – and it's an interactive interpreter of programming languages. Basically, it executes one command at a time, printing the result, thus allowing programmers to experiment with a language, including trying to debug something.
 
 ```
 ### Question #3
@@ -42,7 +43,12 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+for (var i = 0; i <= (foods.length - 1); i++){
+  var foodStuff = foods[i];
+  for (var e = 0; e <= foods.length; e++){
+    console.log("I want to eat a " + foodStuff[e]);
+  }
+};
 ```
 ### Question #4
 
@@ -53,7 +59,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+foods[1][0];
 ```
 
 ## Scope/Context/Closures
@@ -63,7 +69,11 @@ How would I go about accessing the string "pizza" in the above array?
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+```
+1. Any variable created without the var keyword is accessible anywhere in the program – ie, in the global scope.
+2. Any vairable created with the var keyword is in the local scope.
+3. Functions are the only things that create new local scopes – and every function creates a new local scope.
+4. The current scope always includes all of the enclosing scopes – so variables in the those outer scopes are available to the current scope.
 ```
 
 ### Question #6
