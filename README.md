@@ -30,7 +30,8 @@ Select all that apply:
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
-```text
+```
+REPL stands for Read-Evaluate-Print-Loop. It is a programming environment that lets developers run Javascript code one line at a time. This is important because when developers encounter a bug or error, they need to carefully comb through the code to figure out how to fix the problem.
 
 ```
 ### Question #3
@@ -42,7 +43,9 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+foods[0].forEach(function (foods) {
+  console.log("I want to eat a " + foods);
+}); //I know this technically is not a "for loop".
 ```
 ### Question #4
 
@@ -53,7 +56,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+foods[1][0];
 ```
 
 ## Scope/Context/Closures
