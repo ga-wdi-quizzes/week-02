@@ -102,9 +102,9 @@ Your Answer:
 
 What are the differences between calling and referencing a function? Please provide examples of each.
 
-```calling a function means executing all of the statements in the function. you call a function like: nyName();
+```calling a function means executing all of the statements in the function. you call a function like: "myName();""
 
-referencing a function means that you are describing it to use at a later time, rather than asking for the function to be executed and carried out at that moment in the code. 
+referencing a function means that you are describing it to use at a later time, rather than asking for the function to be executed and carried out at that moment in the code. "myName" 
 
 ```
 ### Question #9
