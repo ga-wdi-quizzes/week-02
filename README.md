@@ -20,7 +20,7 @@ Select all that apply:
 [X] Strings
 [X] Booleans
 [X] Undefined
-[X] NaN
+[] NaN
 [X] Integers
 [X] Arrays
 [X] Null
@@ -43,7 +43,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-for (var i= 0; i< foods[0].length; i++) {
+for (var i= 0; i< foods[0].length; i+=1) {
   console.log("I want to eat a " + foods[0][i]);
 }
 ```
@@ -55,8 +55,8 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 
 How would I go about accessing the string "pizza" in the above array?
 
-```js
-var pizza = foods[1][0];
+js
+foods[1][0];
 ```
 
 ## Scope/Context/Closures
@@ -66,7 +66,9 @@ var pizza = foods[1][0];
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+```--When defined variable uses the var keyword, the variable can only able to be used within the local scope.
+  --Variables that are not defined with the var keyword are global variables and can be called from anywhere inside or outside the function.
+  --the largest scope includes all inner scopes.
 ```
 
 ### Question #6
@@ -77,8 +79,12 @@ this method should set the pizza's temperature to be 300. Note: you may not use
 the variable pizza inside your method.
 
 Your Answer:
-```js
-// write code here
+```var pizza = {
+    temperature: 70,
+    bake: function(){
+      this.temperature = 300;
+    }
+}
 ```
 
 ### Question #7
@@ -86,8 +92,8 @@ Your Answer:
 Define a global variable instructor and set it equal to your Squad Instructor's Name. Then, define the same as a local variable instead.
 
 Your Answer:
-```js
-// write code here
+```instructor = "Adrian" --global
+  var instructor = "Adrian" -- local
 ```
 
 ## Objects and Functions
@@ -96,9 +102,9 @@ Your Answer:
 
 What are the differences between calling and referencing a function? Please provide examples of each.
 
-```calling a function means executing all of the statements in the function. you call a function like: sayHello();
+```calling a function means executing all of the statements in the function. you call a function like: nyName();
 
-referencing a function
+referencing a function means that you are describing it to use at a later time, rather than asking for the function to be executed and carried out at that moment in the code. 
 
 ```
 ### Question #9
@@ -111,7 +117,7 @@ var student = {
   name: "Alexa",
   age: 25,
   sayHello: function() {
-    console.log("Hi, my name is Alexa")
+    console.log("Hi, my name is " + this.name);
   }
 };
 ```
