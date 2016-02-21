@@ -128,12 +128,14 @@ Using the object literal notation, Define an object called student and give it t
 Your Answer:
 ```js
 var student = {
-    name = "Adrian",
-    age = 33
-    sayHello: function(){
-      console.log("Hi, my name is (also) "+ this.name);
-    }
+    name: "Adrian",
+    age: 33,
+    sayHello:function(){
+      console.log("Hi, my name is (also) "+ this.name + " and I am " + this.age +
+     " years old. Yay!");
+    },
 }
+console.log(student.sayHello());
 ```
 
 ## Callbacks
@@ -146,5 +148,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
