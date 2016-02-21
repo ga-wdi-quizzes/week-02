@@ -31,7 +31,7 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-REPL is an environment that manages an interactive session in which users are able to enter code that is then executed and the results printed out.  A REPL can be used to test out small bits of code before adding it to an application.
+REPL is an environment that accepts user submitted code, executes it, and then prints out the results.  A REPL can be used to test out and experiment with small bits of code before adding it to an application.
 ```
 ### Question #3
 
