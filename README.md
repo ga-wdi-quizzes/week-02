@@ -66,7 +66,8 @@ foods[1][0];
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+```
+Scope is the list of all the variables that can be accessed from the current line of code. Global variables can be accessed anywhere. Conversely, variables that are defined within a function using 'var =' cannot be accessed globally; they can only be accessed within that function and any child functions.
 ```
 
 ### Question #6
@@ -78,7 +79,16 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+var pizza = {
+  temperature: 70,
+  bake: function() {
+    console.log("Pizza baked to 300 degrees.");
+     this.temperature = 300;
+  }
+};
+console.log(pizza.temperature);
+pizza.bake();
+console.log(pizza.temperature);
 ```
 
 ### Question #7
