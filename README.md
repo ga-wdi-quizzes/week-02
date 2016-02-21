@@ -108,7 +108,24 @@ var instructor = Becky;
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
+Once a function is defined, we can either call it or reference it. When you call a function, it performs the duties prescribed to it. When you reference a function, it prints out the details of what that function does upon being called.
 
+For example:
+var pizza = {
+  temperature: 70,
+  bake: function() {
+    console.log("Pizza baked to 300 degrees.");
+     this.temperature = 300;
+  }
+};
+pizza.bake(); //CALLING the function
+  performs function and changes temperature from 70 to 300.
+pizza.bake; //REFERENCING the function
+prints out the following:
+  function () {
+    console.log("Pizza baked to 300 degrees.");
+    this.temperature = 300;
+}
 ```
 ### Question #9
 
@@ -116,7 +133,14 @@ Using the object literal notation, Define an object called student and give it t
 
 Your Answer:
 ```js
-// write code here
+var student = {
+  name: "Christine",
+  age: 24,
+  sayHello: function() {
+    console.log("Hi, my name is " + this.name +".");
+  }
+}
+student.sayHello();
 ```
 
 ## Callbacks
@@ -129,5 +153,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[X] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
