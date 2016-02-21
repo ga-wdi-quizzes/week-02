@@ -17,13 +17,13 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
-[] Undefined
+[x] Strings
+[x] Booleans
+[x] Undefined
 [] NaN
-[] Integers
+[x] Integers
 [] Arrays
-[] Null
+[x] Null
 ```
 
 ## Question #2
@@ -31,7 +31,7 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-
+REPL is "read eval print loop" and it helps in testing small bits of code by quickly showing the result of code.
 ```
 ### Question #3
 
@@ -42,7 +42,12 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
+
+for (i = 0; i < foods[0].length; i = i +1)
+{
+console.log("I want to eat " + foods[0][i]);
+}
 ```
 ### Question #4
 
@@ -53,7 +58,9 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
+
+console.log(foods[1][0]);
 ```
 
 ## Scope/Context/Closures
@@ -63,7 +70,8 @@ How would I go about accessing the string "pizza" in the above array?
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+```
+Scope defines where the variable is accessible. If variable is declared outside of function then it is accessible globally through out the code whereas a local variable which is inside of a function is only available to access in that function.
 ```
 
 ### Question #6
@@ -115,5 +123,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
