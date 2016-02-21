@@ -20,7 +20,7 @@ Select all that apply:
 [x] Strings
 [x] Booleans
 [x] Undefined
-[x] NaN
+[] NaN
 [x] Integers
 [] Arrays
 [x] Null
