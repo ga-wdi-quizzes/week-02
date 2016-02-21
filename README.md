@@ -17,8 +17,8 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
+[x] Strings
+[x] Booleans
 [] Undefined
 [] NaN
 [] Integers
@@ -31,7 +31,7 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-
+It is a site for checking and printing JavaScript code, and it is important for us to get in the habit of troubleshooting in programing languages because there will be constant bugs.
 ```
 ### Question #3
 
@@ -40,6 +40,11 @@ Explain what is a REPL, and why is it important for us as developers and help wi
 var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
+
+for(var i = 0; i<foods.length; i++){
+
+}
+
 
 ```js
 // write code here
@@ -53,7 +58,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+create a for loop for foods.. now you can use an array for pizza [4]; which is the 4th in the array
 ```
 
 ## Scope/Context/Closures
@@ -63,8 +68,10 @@ How would I go about accessing the string "pizza" in the above array?
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
-```
+
+Scope deals with where functions and variables can be accessed on the page.
+If variables are located inside of a scope they can only bee accessed there.
+If they are in the global scope, they can be accessed anywhere.
 
 ### Question #6
 
@@ -74,18 +81,23 @@ this method should set the pizza's temperature to be 300. Note: you may not use
 the variable pizza inside your method.
 
 Your Answer:
-```js
-// write code here
-```
+
+var pizza = 70.bake
+
 
 ### Question #7
 
 Define a global variable instructor and set it equal to your Squad Instructor's Name. Then, define the same as a local variable instead.
 
 Your Answer:
-```js
-// write code here
-```
+
+var instructor = nick;
+
+function newname(){
+
+  instructor = nick;
+}
+newname()
 
 ## Objects and Functions
 
@@ -93,17 +105,21 @@ Your Answer:
 
 What are the differences between calling and referencing a function? Please provide examples of each.
 
-```text
+calling a function initiates it runs the function when called. referencing only grabs the information of that function.
 
-```
 ### Question #9
 
 Using the object literal notation, Define an object called student and give it the properties (your attributes) of name, age, and a method sayHello, that outputs "Hi, my name is [your_name]".
 
 Your Answer:
-```js
-// write code here
-```
+
+var object = {
+
+student = [nyron , 20]
+
+}
+
+sayHello = object.student;
 
 ## Callbacks
 
@@ -114,6 +130,6 @@ Your Answer:
 Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
-[] Synchronous code runs all at the same time, asynchronous code runs completely randomly
+[x] Synchronous code runs all at the same time, asynchronous code runs completely randomly
 [] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
