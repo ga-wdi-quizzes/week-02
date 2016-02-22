@@ -17,13 +17,13 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
-[] Undefined
+[X] Strings
+[X] Booleans
+[X] Undefined
 [] NaN
-[] Integers
-[] Arrays
-[] Null
+[X] Integers
+[X] Arrays
+[X] Null
 ```
 
 ## Question #2
@@ -31,7 +31,7 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-
+REPL stands for "Read, Evaluate, Print, Loop".  It is a computer environment that interactively responds to user input.  This is important in debugging because it allows the developer to evaluate and troubleshoot errors in their code in real time.  This improves efficiency and streamlines the debugging process.
 ```
 ### Question #3
 
@@ -42,7 +42,9 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+for (i = 0; i > 6; i++ ){
+  console.log("I want to eat a [i]");
+}
 ```
 ### Question #4
 
@@ -75,7 +77,12 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+var pizza = {
+  temperature: 70,
+  bake: function (){
+    pizza.temperature = 300;
+  }
+}
 ```
 
 ### Question #7
@@ -84,6 +91,7 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 
 Your Answer:
 ```js
+
 // write code here
 ```
 
@@ -94,7 +102,7 @@ Your Answer:
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
-
+Calling a function
 ```
 ### Question #9
 
@@ -102,7 +110,13 @@ Using the object literal notation, Define an object called student and give it t
 
 Your Answer:
 ```js
-// write code here
+var student = {
+  name: "Todd",
+  age: 32,
+  sayHello: function(name){
+    console.log("Hi, my name is " + student.name);
+  }
+}
 ```
 
 ## Callbacks
@@ -115,5 +129,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[X] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
