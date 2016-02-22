@@ -20,7 +20,7 @@ Select all that apply:
 [x] Strings
 [x] Booleans
 [x] Undefined
-[x] NaN
+[] NaN
 [x] Integers
 [x] Arrays
 [x] Null
@@ -42,7 +42,9 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+for (var i = 0; i < foods[0].length; i++) {
+    console.log ("I want to eat a " + foods[0][i]);
+}
 ```
 ### Question #4
 
