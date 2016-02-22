@@ -20,9 +20,9 @@ Select all that apply:
 [x] Strings
 [x] Booleans
 [x] Undefined
-[x] NaN
-[] Integers
-[x] Arrays
+[] NaN
+[x] Integers
+[] Arrays
 [x] Null
 ```
 
@@ -76,7 +76,7 @@ Describe the rules of scope in JavaScript.
 
 Your Answer:
 ```text
-Scope is the list of variables you can access to . In javascript, scope is the list of variables, objects, and functions you can access to. JS has function scope. Variables declared within a JS function becomes Local to the function(only access within that function). Variables declared outside of the function becomes Global function(which you can access from anywhere).
+Variables declared within a JS function becomes Local(Scope) to the function(only access within that function). Variables declared outside of the function becomes Global(Scope) function(which you can access from anywhere).
 
 
 
@@ -105,7 +105,7 @@ Your Answer:
 ```js
 Global
 instructor = "Robin";
-Local (inside of one function or right above that function)
+Local (inside of one function)
 var instructor : "Robin";
 ```
 
