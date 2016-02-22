@@ -84,7 +84,11 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 
 Your Answer:
 ```js
-// write code here
+//global
+instructor = Robin;
+//local
+var instructor = Robin;
+
 ```
 
 ## Objects and Functions
@@ -102,7 +106,13 @@ Using the object literal notation, Define an object called student and give it t
 
 Your Answer:
 ```js
-// write code here
+var student = {
+  name: "Winnie",
+  age: 27,
+  sayHello: function () {
+    console.log("Hi, my name is " + student.name);
+    }
+}
 ```
 
 ## Callbacks
