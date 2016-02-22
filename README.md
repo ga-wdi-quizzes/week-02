@@ -21,8 +21,8 @@ Select all that apply:
 [X] Booleans
 [X] Undefined
 [] NaN
-[] Integers
-[X] Arrays
+[X] Integers
+[] Arrays
 [X] Null
 ```
 
@@ -45,11 +45,9 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-for (var i = 0; i < foods.length; i++){
-  for (var j = 0; j < foods[i].length; j++){
-    console.log(foods[i][j]);
+  for (var i = 0; i < foods[0].length; i++){
+    console.log("I want to eat a " + foods[0][i]);
   }
-}
 ```
 ### Question #4
 
@@ -107,10 +105,9 @@ function scopeTest(){
   var instructor = "nick";
 }
 // Another example:
-function scopeTest(){
   instructor = "nick";
   var instructor = "nick";
-}
+
 ```
 
 ## Objects and Functions
