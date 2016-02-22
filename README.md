@@ -19,11 +19,11 @@ Select all that apply:
 ```
 [x] Strings
 [x] Booleans
-[] Undefined
-[] NaN
-[] Integers
-[] Arrays
-[] Null
+[X] Undefined
+[X] NaN
+[X] Integers
+[X] Arrays
+[X] Null
 ```
 
 ## Question #2
