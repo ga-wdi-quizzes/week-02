@@ -30,8 +30,8 @@ Select all that apply:
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
-```text
-
+```
+REPL stands or Read-Eval-Print Loop. It allows users to enter code into a program that will evaluate it and print out the results; it's useful in testing out portions of code as developers are working on various projects.
 ```
 ### Question #3
 
@@ -115,5 +115,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
