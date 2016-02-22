@@ -17,21 +17,21 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
-[] Undefined
+[x] Strings
+[x] Booleans
+[x] Undefined
 [] NaN
 [] Integers
 [] Arrays
-[] Null
+[x] Null
 ```
 
 ## Question #2
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
-```text
-
+```
+A REPL is a method for developers to Read, Evaluate, Print and Loop a piece of code. It's an important process for developers to test a piece of code in an interactive programming environment by only inputing single expressions.
 ```
 ### Question #3
 
@@ -41,8 +41,10 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
-```js
-// write code here
+```
+var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
+for (foods = "apple", "bananas", "strawberry";{
+  console:log("I want to eat a fruit")};)
 ```
 ### Question #4
 
@@ -52,8 +54,8 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 
 How would I go about accessing the string "pizza" in the above array?
 
-```js
-// write code here
+```
+var meal = foods[3];
 ```
 
 ## Scope/Context/Closures
@@ -63,7 +65,11 @@ How would I go about accessing the string "pizza" in the above array?
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+```
+Rule #1: a variable created without the var keyword anywhere in the program, is placed in the global scope.
+Rule #2: a variable created with the var keyword is created in the local scope.
+Rule #3: functions create a new local scope.
+Rule #4: the current scope can access all outer scopes, but not the other way around.
 ```
 
 ### Question #6
@@ -74,8 +80,14 @@ this method should set the pizza's temperature to be 300. Note: you may not use
 the variable pizza inside your method.
 
 Your Answer:
-```js
-// write code here
+```
+var pizza = {
+  temp: "70",
+  bake: function(newTemp){
+    console.log("temp has been set to 300");
+    pizza.temp = "300";
+  }
+}
 ```
 
 ### Question #7
@@ -83,8 +95,14 @@ Your Answer:
 Define a global variable instructor and set it equal to your Squad Instructor's Name. Then, define the same as a local variable instead.
 
 Your Answer:
-```js
-// write code here
+```
+var instructor = NickOlds; //global variable
+
+function() {
+  var instructor = "NickOlds";
+} // local variable
+
+
 ```
 
 ## Objects and Functions
@@ -93,16 +111,20 @@ Your Answer:
 
 What are the differences between calling and referencing a function? Please provide examples of each.
 
-```text
-
+```
+You call a function that you want executed now by writing it as someVariable = someFunction (). You reference a function that you want to run upon some other action preceding it by writing it as someVariable = someFunction. This would imply that someVariable is an alias for someFunction. If we call someVariable(), we would get the same result as someFunction().
 ```
 ### Question #9
 
 Using the object literal notation, Define an object called student and give it the properties (your attributes) of name, age, and a method sayHello, that outputs "Hi, my name is [your_name]".
 
 Your Answer:
-```js
-// write code here
+```
+var student = {
+  name: "Robel",
+  age: "37"
+}
+console.log("Hi, my name is " + student.name);
 ```
 
 ## Callbacks
@@ -115,5 +137,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
