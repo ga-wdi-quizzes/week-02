@@ -17,13 +17,13 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
-[] Undefined
-[] NaN
-[] Integers
-[] Arrays
-[] Null
+[x] Strings
+[x] Booleans
+[x] Undefined
+[x] NaN
+[x] Integers
+[x] Arrays
+[x] Null
 ```
 
 ## Question #2
@@ -31,7 +31,7 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-
+REPL stands for read-eval-print loop. It helps with debugging because developers can inspect the printed results and correct any errors to make sure the code works up to that point.
 ```
 ### Question #3
 
@@ -43,6 +43,9 @@ Create a For Loop that outputs the following string for each piece of fruit in t
 
 ```js
 // write code here
+for (i = 0, i <= foods[0].length; i++) {
+  console.log("I want to eat a foods[0][i])":
+}
 ```
 ### Question #4
 
@@ -54,6 +57,7 @@ How would I go about accessing the string "pizza" in the above array?
 
 ```js
 // write code here
+foods[1][0]
 ```
 
 ## Scope/Context/Closures
@@ -64,6 +68,7 @@ Describe the rules of scope in JavaScript.
 
 Your Answer:
 ```text
+Variables created without 'var' are placed in the global scope. Variables created with 'var' are in the current local scope. Only functions create a new local scope and any variables created within a function can only be accessed within that function. If a variable is created outside a function (even with 'var'), that variable is placed in the global scope.
 ```
 
 ### Question #6
@@ -76,6 +81,13 @@ the variable pizza inside your method.
 Your Answer:
 ```js
 // write code here
+var pizza = function () {
+  temperature: 70,
+  bake: function (setTemperature) {
+    this.temperature = setTemperature;
+  }
+}
+
 ```
 
 ### Question #7
@@ -85,6 +97,12 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 Your Answer:
 ```js
 // write code here
+var instructor = becky
+
+function displayName () {
+  var instructor = becky;
+  console.log(instructor);
+}
 ```
 
 ## Objects and Functions
@@ -94,6 +112,22 @@ Your Answer:
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
+Calling a function means to invoke a function:
+
+function add( num1, num2 ) {
+  return num1 + num2;
+}
+
+add( 3, 5 );
+8
+
+Referencing a function means to to 'define' a function:
+
+add
+
+function add( num1, num2 ) {
+  return num1 + num2;
+}
 
 ```
 ### Question #9
@@ -103,6 +137,13 @@ Using the object literal notation, Define an object called student and give it t
 Your Answer:
 ```js
 // write code here
+var student = {
+  name: Charles,
+  age: 30,
+  sayHello: function () {
+    console.log( "Hi, my name is" + this.name );
+  });
+}
 ```
 
 ## Callbacks
@@ -115,5 +156,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
