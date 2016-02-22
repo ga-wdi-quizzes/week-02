@@ -17,13 +17,13 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
-[] Undefined
-[] NaN
-[] Integers
-[] Arrays
-[] Null
+[X] Strings
+[X] Booleans
+[X] Undefined
+[X] NaN
+[X] Integers
+[X] Arrays
+[X] Null
 ```
 
 ## Question #2
@@ -31,7 +31,7 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-
+REPL is a live tool used to write code and see the output of your code at the same time.
 ```
 ### Question #3
 
@@ -42,7 +42,11 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+for(i = 0; i > 0; i++){
+  function() {
+    var prompt("I want to eat a" + " " + foods[0])
+  }
+}
 ```
 ### Question #4
 
@@ -53,7 +57,9 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+function pizza() {
+  console.log([1]);
+}
 ```
 
 ## Scope/Context/Closures
@@ -64,6 +70,7 @@ Describe the rules of scope in JavaScript.
 
 Your Answer:
 ```text
+Scope is the container created to house different areas of your code to ensure the JavaScript behaves the way you want it to.
 ```
 
 ### Question #6
@@ -75,7 +82,15 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+var pizza = myObject;
+
+var myObject = {
+  temperature:
+  bake: function () {
+    console.log("300 degrees f/c.");
+
+  }
+}
 ```
 
 ### Question #7
@@ -84,7 +99,13 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 
 Your Answer:
 ```js
-// write code here
+var squadLeader = "Matt";
+
+function(squadLeader){
+  var squadLeader("Matt");
+}
+
+
 ```
 
 ## Objects and Functions
@@ -94,7 +115,7 @@ Your Answer:
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
-
+If you want to execute the function now the call it. If you want to use it later then you reference it.
 ```
 ### Question #9
 
@@ -102,7 +123,16 @@ Using the object literal notation, Define an object called student and give it t
 
 Your Answer:
 ```js
-// write code here
+var student = {
+  name: [];
+  age: "22";
+  sayHello: function() {
+    var name = prompt("Enter your name.");
+    console.log("Hi, my name is" + " " + name);
+
+  }
+console.dir(student);
+}
 ```
 
 ## Callbacks
@@ -113,7 +143,7 @@ Your Answer:
 
 Select all that apply:
 ```
-[] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
+[X] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[X] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
