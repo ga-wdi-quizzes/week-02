@@ -20,8 +20,8 @@ Select all that apply:
 [X] Booleans
 [X] Undefined
 [] NaN
-[X] Integers
-[] Arrays
+[X] Numbers
+[X] Arrays
 [X] Null
 ```
 
