@@ -17,13 +17,13 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
-[] Undefined
+[x] Strings
+[x] Booleans
+[x] Undefined
 [] NaN
 [] Integers
-[] Arrays
-[] Null
+[x] Arrays
+[x] Null
 ```
 
 ## Question #2
@@ -31,7 +31,8 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-
+Read, Evaluate, Print and Loop:
+Repl reads, evaluates, prints and loop through code that is loaded on the browser. It identifies bugs and enables developer to interract with the code.
 ```
 ### Question #3
 
@@ -43,6 +44,9 @@ Create a For Loop that outputs the following string for each piece of fruit in t
 
 ```js
 // write code here
+for (var i = 0; i < foods.length; i++){
+  console.log("I want to eat a [fruit]")
+}
 ```
 ### Question #4
 
@@ -54,6 +58,7 @@ How would I go about accessing the string "pizza" in the above array?
 
 ```js
 // write code here
+foods[1][0];
 ```
 
 ## Scope/Context/Closures
@@ -64,6 +69,8 @@ Describe the rules of scope in JavaScript.
 
 Your Answer:
 ```text
+
+
 ```
 
 ### Question #6
@@ -76,6 +83,13 @@ the variable pizza inside your method.
 Your Answer:
 ```js
 // write code here
+pizza = {
+  temperature:70,
+
+  bake: function(){
+    this.temperature = 300
+  }
+}
 ```
 
 ### Question #7
@@ -85,6 +99,8 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 Your Answer:
 ```js
 // write code here
+instructor = "Jesse" // global
+var Instructor = "Jesse" // local
 ```
 
 ## Objects and Functions
@@ -94,6 +110,12 @@ Your Answer:
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
+refrencing a function is defining/stating of the function:
+function multiply(a, b) {
+    return a * b;
+}
+function calling is requesting the function to be executed:
+multiply(10, 2);
 
 ```
 ### Question #9
@@ -103,6 +125,13 @@ Using the object literal notation, Define an object called student and give it t
 Your Answer:
 ```js
 // write code here
+student = {
+  name: "yinka",
+  age: "28",
+  sayHello: function(){
+    console.log("Hi, my name is [name]")
+  }
+}
 ```
 
 ## Callbacks
@@ -115,5 +144,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
