@@ -18,12 +18,12 @@ the square brackets (for multiple-choice questions).
 Select all that apply:
 ```
 [x] Strings
-[] Booleans
-[] Undefined
+[x] Booleans
+[x] Undefined
 [] NaN
 [] Integers
-[] Arrays
-[] Null
+[x] Arrays
+[x] Null
 ```
 
 ## Question #2
@@ -31,7 +31,8 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-
+Read, Evaluate, Print and Loop:
+Repl reads, evaluates, prints and loop through code that is loaded on the browser. It identifies bugs and enables developer to interract with the code.
 ```
 ### Question #3
 
@@ -43,6 +44,9 @@ Create a For Loop that outputs the following string for each piece of fruit in t
 
 ```js
 // write code here
+for (var i = 0; i < foods.length; i++){
+  console.log("I want to eat a [fruit]")
+}
 ```
 ### Question #4
 
@@ -54,6 +58,7 @@ How would I go about accessing the string "pizza" in the above array?
 
 ```js
 // write code here
+foods[1][0];
 ```
 
 ## Scope/Context/Closures
@@ -64,6 +69,7 @@ Describe the rules of scope in JavaScript.
 
 Your Answer:
 ```text
+
 ```
 
 ### Question #6
@@ -76,6 +82,10 @@ the variable pizza inside your method.
 Your Answer:
 ```js
 // write code here
+pizza = {
+  temperature:70,
+  bake
+  }
 ```
 
 ### Question #7
