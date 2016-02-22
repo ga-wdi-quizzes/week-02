@@ -19,11 +19,11 @@ Select all that apply:
 ```
 [x] Strings
 [x] Booleans
-[X] Undefined
-[X] NaN
-[X] Integers
-[X] Arrays
-[X] Null
+[x] Undefined
+[x] NaN
+[x] Integers
+[x] Arrays
+[x] Null
 ```
 
 ## Question #2
@@ -97,7 +97,18 @@ var instructor = Robin;
 
 What are the differences between calling and referencing a function? Please provide examples of each.
 
-```text
+```
+calling a function will execute the code inside it; referencing only refers back to it without executing the code.
+```
+```js
+function niceToMeetYou (){
+  console.log ("Hi there!");
+}
+
+//calling niceToMeetYou
+niceToMeetYou ()
+//referencing niceToMeetYou
+niceToMeetYou;
 
 ```
 ### Question #9
