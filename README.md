@@ -70,6 +70,7 @@ Describe the rules of scope in JavaScript.
 Your Answer:
 ```text
 
+
 ```
 
 ### Question #6
@@ -84,8 +85,11 @@ Your Answer:
 // write code here
 pizza = {
   temperature:70,
-  bake
+
+  bake: function(){
+    this.temperature = 300
   }
+}
 ```
 
 ### Question #7
@@ -95,6 +99,8 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 Your Answer:
 ```js
 // write code here
+instructor = "Jesse" // global
+var Instructor = "Jesse" // local
 ```
 
 ## Objects and Functions
@@ -104,6 +110,12 @@ Your Answer:
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
+refrencing a function is defining/stating of the function:
+function multiply(a, b) {
+    return a * b;
+}
+function calling is requesting the function to be executed:
+multiply(10, 2);
 
 ```
 ### Question #9
@@ -113,6 +125,13 @@ Using the object literal notation, Define an object called student and give it t
 Your Answer:
 ```js
 // write code here
+student = {
+  name: "yinka",
+  age: "28",
+  sayHello: function(){
+    console.log("Hi, my name is [name]")
+  }
+}
 ```
 
 ## Callbacks
@@ -125,5 +144,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
