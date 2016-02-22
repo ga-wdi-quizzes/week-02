@@ -16,12 +16,12 @@
 
 Select all that apply:
 ```
-[X] Strings
-[X] Booleans
+[X] String
+[X] Boolean
 [X] Undefined
 [] NaN
-[X] Numbers
-[X] Arrays
+[X] Number
+[X] Array
 [X] Null
 ```
 
