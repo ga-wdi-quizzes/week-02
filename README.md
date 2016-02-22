@@ -53,7 +53,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+foods [1][0];
 ```
 
 ## Scope/Context/Closures
@@ -63,7 +63,8 @@ How would I go about accessing the string "pizza" in the above array?
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+```
+Scope defines where a variable can be used and there are two types, local and global. Any variable without "var" is considered global and can be used anywhere. Variables defined with "var" can only be within the local scope; meaning if it's defined in a function it can only be used inside that function. Also, functions can use other variables so long as they are defined within it's local scope.
 ```
 
 ### Question #6
