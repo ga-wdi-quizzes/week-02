@@ -33,9 +33,8 @@ Explain what is a REPL, and why is it important for us as developers and help wi
 
 *Your Answer:*
 
-```text
+
 REPL stands for `Read-Eval-Print Loop`; one example of a REPL is the console in the Chrome browser. Developers use this tool to test code one line at a time: the REPL reads the code, evaluates it, prints it to the console, and then loops back to repeat the process for the next line of code entered. This tool is useful for debugging because it allows us to identify the line number and the stack trace of whatever error is being thrown.
-```
 
 ### Question #3
 
@@ -76,7 +75,6 @@ Describe the rules of scope in JavaScript.
 
 *Your Answer:*
 
-```text
 Scope is defined as where a given variable may be referenced in code. In JavaScript there are two types of scope, namely global scope and local scope. The rules of scope in JavaScript are as follows:
 
 1. Variables defined without the `var` keyword are automatically in the global scope
@@ -85,7 +83,6 @@ Scope is defined as where a given variable may be referenced in code. In JavaScr
   * The implication of this point is that variables not defined *within* a function are automatically in the global scope
 4. The current scope includes all outer scopes (i.e., scopes that include the current scope)
   * The implication of this point is that variables in outer scopes can be accessed within a function, but variables *within* the function cannot be accessed from without it
-```
 
 ### Question #6
 
@@ -129,9 +126,9 @@ What are the differences between calling and referencing a function? Please prov
 
 *Your Answer*
 
-```text
+
 As an example of a function, I will refer to `printName` from my answer to question #7 above. In order to call the function, I would need to type `printName()`, which indicates that I want to call the output of the function after an argument has been passed into that function. If I were to reference the function, I would simply type `printName`, without the parentheses. I would call this function if I wanted it to execute immediately, but I would reference it if I did not want it to execute until it was needed by some other function, for example.
-```
+
 ### Question #9
 
 Using the object literal notation, Define an object called student and give it the properties (your attributes) of name, age, and a method sayHello, that outputs "Hi, my name is [your_name]".
