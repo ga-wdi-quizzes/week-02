@@ -96,10 +96,10 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 Your Answer:
 ```js
 var instructor = "Becky";
- +
- +function instructor() {
- +    instructor = "Becky";
- +}
+ 
+ function instructor() {
+     instructor = "Becky";
+ }
 ```
 
 ## Objects and Functions
