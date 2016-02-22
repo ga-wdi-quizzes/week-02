@@ -21,7 +21,7 @@ Select all that apply:
 [] Booleans
 [] Undefined
 [] NaN
-[] Integers
+[] Number
 [] Arrays
 [] Null
 ```
