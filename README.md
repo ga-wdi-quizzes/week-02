@@ -17,22 +17,24 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
-[] Undefined
-[] NaN
-[] Integers
-[] Arrays
-[] Null
+[X] Strings
+[X] Booleans
+[X] Undefined
+[] NaN // NaN is a "Number"
+[] Integers // "Number" is a JS Data Type
+[] Arrays // Arrays are Objects
+[X] Null
 ```
 
 ## Question #2
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
+*Your Answer:*
 ```text
-
+REPL stands for `Read-Eval-Print Loop`; one example of a REPL is the console in the Chrome browser. Developers use this tool to test code one line at a time: the REPL reads the code, evaluates it, prints it to the console, and then loops back to repeat the process for the next line of code entered. This tool is useful for debugging because it allows us to identify the line number and the stack trace of whatever error is being thrown.
 ```
+
 ### Question #3
 
 **Given the Following Array**
@@ -42,7 +44,10 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
+for (i = 0; i < foods[0].length; i++) {
+   console.log("I want to eat a(n) " + foods[0][i])
+}
 ```
 ### Question #4
 
@@ -53,7 +58,8 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
+foods[1][0];
 ```
 
 ## Scope/Context/Closures
@@ -62,8 +68,17 @@ How would I go about accessing the string "pizza" in the above array?
 
 Describe the rules of scope in JavaScript.
 
-Your Answer:
+*Your Answer:*
+
 ```text
+Scope is defined as where a given variable may be referenced in code. In JavaScript there are two types of scope, namely global scope and local scope. The rules of scope in JavaScript are as follows:
+
+1. Variables defined without the `var` keyword are automatically in the global scope
+2. Variables defined with the `var` keyword are in the current local scope
+3. All functions create a new local scope; only functions may create a new local scope
+  * The implication of this point is that variables not defined *within* a function are automatically in the global scope
+4. The current scope includes all outer scopes (i.e., scopes that include the current scope)
+  * The implication of this point is that variables in outer scopes can be accessed within a function, but variables *within* the function cannot be accessed from without it
 ```
 
 ### Question #6
@@ -75,7 +90,13 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+var pizza = {
+  temperature: 70,
+  bake: function(){
+    this.temperature = 300;
+  }
+}
+// After calling the method `pizza.bake();`, I can then `console.log(pizza.temperature);`, which is now set to 300.
 ```
 
 ### Question #7
@@ -84,7 +105,12 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 
 Your Answer:
 ```js
-// write code here
+var instructor = "Adrian";  //`instructor` is a global variable here
+
+var printName = function(instructor) {
+  var instructor = "Adrian";  // `instructor` is a local variable here, because it is inside the `printName` function
+   console.log(instructor);
+}
 ```
 
 ## Objects and Functions
