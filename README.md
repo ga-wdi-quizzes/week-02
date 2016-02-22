@@ -82,8 +82,15 @@ this method should set the pizza's temperature to be 300. Note: you may not use
 the variable pizza inside your method.
 
 Your Answer:
-```js
-// write code here
+```
+
+var pizza = {
+  temperature: 70,
+  bake: function()
+    this.temperature = 300;
+
+}
+
 ```
 
 ### Question #7
@@ -108,16 +115,22 @@ this is a global variable as long as it was not declared inside {} curly bracket
 
 What are the differences between calling and referencing a function? Please provide examples of each.
 
-```text
-
+```
+Calling a function means invoking a function. when invoking a function it gives the result of that function. referencing means to assign name to an object.
 ```
 ### Question #9
 
 Using the object literal notation, Define an object called student and give it the properties (your attributes) of name, age, and a method sayHello, that outputs "Hi, my name is [your_name]".
 
 Your Answer:
-```js
-// write code here
+```
+var student = {
+  name: "Bipin",
+  age: 28,
+  sayHello: function() {
+    console.log("Hi, my name is " + this.name);
+  }
+}
 ```
 
 ## Callbacks
