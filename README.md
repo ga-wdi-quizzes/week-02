@@ -76,7 +76,13 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+var pizza = {
+  temperature: 70,
+  bake: function (){
+    this.temperature = 300;
+    console.log (pizza.temperature);
+  }
+}
 ```
 
 ### Question #7
