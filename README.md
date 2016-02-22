@@ -17,12 +17,12 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
+[X] Strings
+[X] Booleans
 [] Undefined
 [] NaN
-[] Integers
-[] Arrays
+[X] Integers
+[X] Arrays
 [] Null
 ```
 
@@ -31,7 +31,7 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-
+REPL is an interactive shell that always programmers to test their codes. It alerts coders of any errors or missing information that is important to who the code operates.
 ```
 ### Question #3
 
@@ -42,7 +42,9 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+// for (i=0; i<foods.length; i++){
+  console.log ("I want to eat a [fruit]")
+}
 ```
 ### Question #4
 
@@ -53,7 +55,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+//
 ```
 
 ## Scope/Context/Closures
@@ -63,7 +65,7 @@ How would I go about accessing the string "pizza" in the above array?
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+```Scope is a way of writing code by breaking it down into the categories: Global and Local.
 ```
 
 ### Question #6
@@ -75,7 +77,12 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+// var food= pizza;
+  var temperature =70;
+  var method = bake;
+  function (method) {
+
+  }
 ```
 
 ### Question #7
@@ -84,7 +91,8 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 
 Your Answer:
 ```js
-// write code here
+//
+
 ```
 
 ## Objects and Functions
@@ -93,8 +101,11 @@ Your Answer:
 
 What are the differences between calling and referencing a function? Please provide examples of each.
 
-```text
+```Calling substitutes an object for another object.
+ex. call([thisObj1][, obj2[obj3]])
 
+Referencing uses a source.
+ex. <script src="png">
 ```
 ### Question #9
 
@@ -102,7 +113,12 @@ Using the object literal notation, Define an object called student and give it t
 
 Your Answer:
 ```js
-// write code here
+// var Student = new Student();
+    myStudent.age= Adult;
+    myStudent.gender= Female;
+    myStudent.name= Lyndsey;
+  console.log("Hi, my name is [myStudent.name].")
+
 ```
 
 ## Callbacks
@@ -114,6 +130,6 @@ Your Answer:
 Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
-[] Synchronous code runs all at the same time, asynchronous code runs completely randomly
+[X] Synchronous code runs all at the same time, asynchronous code runs completely randomly
 [] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
