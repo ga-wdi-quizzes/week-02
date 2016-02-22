@@ -42,6 +42,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
+//I know iteration is needed here, but unsure how to move forward...
 for (i = 0; i > 6; i++ ){
   console.log("I want to eat a [i]");
 }
@@ -55,7 +56,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+//Unclear on how to access nested arrays...
 ```
 
 ## Scope/Context/Closures
@@ -66,6 +67,7 @@ Describe the rules of scope in JavaScript.
 
 Your Answer:
 ```text
+Scope refers to where in a program a variable (function, object, etc.) can be used, and is considered to be either global or local.  Within the global scope, access is available to all parts of the program.  Global variables, for example, have no restrictions on where in the program they can be used.  Local variables, in contrast, are restricted to use within the functions where they are defined.  This means other functions (outside of the local function) cannot use variables that are defined locally.
 ```
 
 ### Question #6
@@ -91,8 +93,17 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 
 Your Answer:
 ```js
+//global variable
+var instructor = "Matt";
+function someFunction(){
+  //code goes here
+}
 
-// write code here
+//local variable
+function someFunction(){
+  var instructor = "Matt";
+  //rest of code...
+}
 ```
 
 ## Objects and Functions
@@ -102,7 +113,17 @@ Your Answer:
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
-Calling a function
+function someFunction(){
+  //code goes here
+}
+
+//calling the function on the console line looks like this and will return a value:
+someFunction();
+32
+
+//referencing a function looks like this on the console line and will display the contents of the function
+someFunction (){//code goes here}
+
 ```
 ### Question #9
 
