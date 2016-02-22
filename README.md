@@ -17,20 +17,20 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] Strings
-[] Booleans
-[] Undefined
+[x] Strings
+[x] Booleans
+[x] Undefined
 [] NaN
 [] Integers
-[] Arrays
-[] Null
+[x] Arrays
+[x] Null
 ```
 
 ## Question #2
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
-```text
+```REPL creates a computer environment that Reads, Evaluates, Prints, and Loops commands, giving an output developers can use to run their code. In class we use REPL.it and I am assuming that the console in chrome's inspection tool is a type of REPL as well.  
 
 ```
 ### Question #3
@@ -42,7 +42,18 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+
+var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
+
+
+
+    for (var i = 0; i <= foods.length; i++) {
+    console.log("I want to eat a " + foods[0][i]);
+
+
+    }
+
+
 ```
 ### Question #4
 
@@ -53,7 +64,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+console.log (foods[1][0]);
 ```
 
 ## Scope/Context/Closures
@@ -63,8 +74,28 @@ How would I go about accessing the string "pizza" in the above array?
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
-```
+Scope defines the global and local functions/variables that are accessible throughout the document. The way it works is that everything within a parent element can access anything that's within that element but not outside of it unless it's referring to a variable that's global. To be considered global, you cannot use var to define a variable, must use the name of the variable only. Also, if a var is set, it must be set outside of any functions or { } to be accessible by all. I cannot describe it by words best but can create an example.
+
+global
+globalexample=()
+
+local
+var globalexample=()
+
+also, the local variable must be outside of any brackets/function to be considered global so other functions can access it. example:
+
+Var globalexample=()
+
+function(){console.log ("hi" + globalexample)}
+
+is accessible because the variable is outside of the function or any other.
+
+but if it was nested within, it cold not. For example
+
+function notAGlobal () {var globalexample=function(){console.log ("hi" + globalexample)}}
+
+This is not a global function because it is within brackets
+
 
 ### Question #6
 
@@ -75,7 +106,10 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+var pizza =
+temperature: "70";
+bake: "";
+
 ```
 
 ### Question #7
@@ -84,7 +118,8 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 
 Your Answer:
 ```js
-// write code here
+instructor="Joe Zaretsky";
+var instructor="Joe Zaretsky";
 ```
 
 ## Objects and Functions
@@ -93,7 +128,16 @@ Your Answer:
 
 What are the differences between calling and referencing a function? Please provide examples of each.
 
-```text
+```
+Referencing is the functions name only and call is when you have the function name and () to add its value. examples below.
+
+function functionName (num1, num 2)
+
+call a function:
+functionName (1, 2)
+
+reference a functionName
+console.log ("You have bought" + functionName + "tickets today")
 
 ```
 ### Question #9
@@ -102,7 +146,14 @@ Using the object literal notation, Define an object called student and give it t
 
 Your Answer:
 ```js
-// write code here
+var student= {
+name: "Kaira Johnson",
+age:"33"
+}
+
+function sayHello() {console.log ("Hi, my name is " + [student.name])}
+
+sayHello()
 ```
 
 ## Callbacks
@@ -114,6 +165,6 @@ Your Answer:
 Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
-[] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[x] Synchronous code runs all at the same time, asynchronous code runs completely randomly
+[x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
