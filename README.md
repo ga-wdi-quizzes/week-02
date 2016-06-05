@@ -17,13 +17,13 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] String
-[] Boolean
-[] Undefined
+[X] String
+[X] Boolean
+[X] Undefined
 [] NaN
-[] Number
+[X] Number
 [] Array
-[] Null
+[X] Null
 ```
 
 ## Question #2
