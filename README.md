@@ -30,8 +30,8 @@ Select all that apply:
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
-```text
-
+```
+It means "Read Eval Print Loop" and is what lets us run JavaScript by each individual line so we can test it bit by bit.
 ```
 ### Question #3
 
@@ -42,7 +42,12 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+for(var x = 0, x < foods[0].length){
+  console.log("I want to eat a" + foods[0][x])
+}
+
+//I know I'm missing something in this but can't figure out what.
+
 ```
 ### Question #4
 
@@ -53,7 +58,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+var pizza = foods[1][0]
 ```
 
 ## Scope/Context/Closures
@@ -63,7 +68,15 @@ How would I go about accessing the string "pizza" in the above array?
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+```
+-Globally-scoped variable
+-Local Scope
+-Intermediate: Object properties
+-Advanced: Closures
+-Advanced: Prototype-based scope resolution
+-Altogether
+-Global+local
+-Catch clause-scoped variable
 ```
 
 ### Question #6
@@ -75,7 +88,12 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+var pizza = {
+  temp: 70,
+  bake: function(){
+    this.temp = 300;
+  }
+}
 ```
 
 ### Question #7
@@ -84,7 +102,8 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 
 Your Answer:
 ```js
-// write code here
+instructor = "Robin";
+var instructor = "Robin";
 ```
 
 ## Objects and Functions
@@ -93,8 +112,12 @@ Your Answer:
 
 What are the differences between calling and referencing a function? Please provide examples of each.
 
-```text
-
+```
+Calling the function is actually using the function and getting a result while referencing it just refers to it without actually using it.
+//This is calling a function:
+callFunction();
+//This is referencing a function:
+.on("click", referenceFunction);
 ```
 ### Question #9
 
@@ -102,7 +125,13 @@ Using the object literal notation, Define an object called student and give it t
 
 Your Answer:
 ```js
-// write code here
+var student = {
+  name: "Gandy",
+  age: 34;
+  sayHello: function(){
+    console.log("Hi, my name is" + this.name);
+  }
+}
 ```
 
 ## Callbacks
@@ -115,5 +144,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[X] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
