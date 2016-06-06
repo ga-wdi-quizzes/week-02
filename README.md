@@ -17,13 +17,13 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] String
-[] Boolean
+[X] String
+[X] Boolean
 [] Undefined
 [] NaN
-[] Number
+[X] Number
 [] Array
-[] Null
+[X] Null
 ```
 
 ## Question #2
@@ -31,6 +31,7 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
+It's the ability to "see" the code process bit by bit to discover errors and/or why the data is not updating as you think it should.
 
 ```
 ### Question #3
@@ -43,6 +44,14 @@ Create a For Loop that outputs the following string for each piece of fruit in t
 
 ```js
 // write code here
+
+
+For i in var foods {
+  i = 0
+  "I want to eat " foods
+}
+
+
 ```
 ### Question #4
 
@@ -54,6 +63,9 @@ How would I go about accessing the string "pizza" in the above array?
 
 ```js
 // write code here
+
+console.log[1][0]
+
 ```
 
 ## Scope/Context/Closures
@@ -95,6 +107,8 @@ What are the differences between calling and referencing a function? Please prov
 
 ```text
 
+
+
 ```
 ### Question #9
 
@@ -115,5 +129,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[X] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
