@@ -80,7 +80,7 @@ Your Answer:
 
 ### Question #7
 
-Define a global variable instructor and set it equal to your Squad Instructor's Name. Then, define the same as a local variable instead.
+Using a 'for' loop, iterate over an array of numbers in JavaScript, printing each to the console.
 
 Your Answer:
 ```js
