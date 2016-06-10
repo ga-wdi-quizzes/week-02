@@ -17,13 +17,13 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] String
-[] Boolean
-[] Undefined
+[X] String
+[X] Boolean
+[X] Undefined
 [] NaN
-[] Number
+[X] Number
 [] Array
-[] Null
+[X] Null
 ```
 
 ## Question #2
@@ -31,7 +31,13 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
+REPL stands for Read, Eval, Print Loop.  It is a program that takes instructions as input, evaluates/performs the instructions, and returns the output to the terminal.  The JavaScript
+console is a REPL, like the one in Chrome.  
 
+It's useful for troubleshooting by providing a quick and dirty means of running chunks of code
+to make sure they do what the programmer things they're doing.  The console also provides tools
+console.log and debugger that give programmers the ability to interrogate programs a they
+run.  
 ```
 ### Question #3
 
@@ -42,7 +48,10 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
+for (i = 0; i < foods[0].length; i+=1) {
+  console.log("I want to eat a " + foods[0][i]);
+}
 ```
 ### Question #4
 
@@ -53,7 +62,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+var pizza = foods[1][0]
 ```
 
 ## Scope/Context/Closures
@@ -64,6 +73,13 @@ Describe the rules of scope in JavaScript.
 
 Your Answer:
 ```text
+Scope is the set of variables, objects, and functions a program has access to at any given time.  
+
+A variable defined using a VAR statement within the main program is GLOBAL and is available everywhere.
+A variable defined using a VAR statement within a function is only available within that function and to functions within that function, and are deleted when that function ends.
+A variable defined without using the VAR statement (e.g., just by assigning it a value like "x = y") is automatically global and available everywhere.  (Evidently, this is not always a good thing.)
+
+
 ```
 
 ### Question #6
@@ -75,7 +91,12 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+var pizza = {
+  temperature: 70,
+  bake: function() {
+    this.temperature = 300;
+  }
+}
 ```
 
 ### Question #7
@@ -99,7 +120,10 @@ $("button").on("click", function(event){
 
 Your Answer:
 ```js
-// write code here
+//global:
+instructor = "Adrian";
+//local:
+  var instructor = "Adrian";
 ```
 
 ## Objects and Functions
@@ -109,15 +133,36 @@ Your Answer:
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
+Calling a function actually executes it, referencing a function specifies it to be used elsewhere.
 
+To call a function, you include the parentheses "()" such as:
+
+  parseInt()
+
+The parentheses may or may not contain parameters being passed to the function.
+
+To refer to a function, you specify the function name without using the parentheses.  For example, one of the parameters of the setInterval function is a reference to a function to be run, specified WITHOUT the parentheses.  The text updateTime in this example is the name of a function to be run by setInterval:
+
+  setInterval(updateTime, 1000)
+
+All callbacks use function references.
 ```
 ### Question #10
 
-Using the object literal notation, Define an object called student and give it the properties (your attributes) of name, age, and a method sayHello, that outputs "Hi, my name is [your_name]".
+Using the object literal notation, Define an object called student and give it
+the properties (your attributes) of name, age, and a method sayHello,
+that outputs "Hi, my name is [your_name]".
 
 Your Answer:
 ```js
-// write code here
+var student = {
+  name: "Kevin Golden",
+  age: 58,
+  sayHello: function() {
+    console.log("Hi, my name is " + this.name)
+  }
+}
+​
 ```
 
 ## Callbacks
@@ -130,5 +175,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[X] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
