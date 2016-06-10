@@ -87,16 +87,31 @@ Your Answer:
 // write code here
 ```
 
+### Question #8
+
+Write the vanilla JS equivalent of the following jQuery code:
+
+```js
+$("button").on("click", function(event){
+  $(event.target).css('color', 'red')
+})
+```
+
+Your Answer:
+```js
+// write code here
+```
+
 ## Objects and Functions
 
-### Question #8
+### Question #9
 
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
 
 ```
-### Question #9
+### Question #10
 
 Using the object literal notation, Define an object called student and give it the properties (your attributes) of name, age, and a method sayHello, that outputs "Hi, my name is [your_name]".
 
@@ -107,7 +122,7 @@ Your Answer:
 
 ## Callbacks
 
-### Question #10
+### Question #11
 
 **What is the difference between synchronous and asynchronous program execution?**
 
