@@ -34,7 +34,7 @@ Explain what is a REPL, and why is it important for us as developers and help wi
 REPL stands for Read, Eval, Print Loop.  It is a program that takes instructions as input, evaluates/performs the instructions, and returns the output to the terminal.  The JavaScript
 console is a REPL, like the one in Chrome.  
 
-It's useful or troubleshooting by providing a quick and dirty means of running chunks of code
+It's useful for troubleshooting by providing a quick and dirty means of running chunks of code
 to make sure they do what the programmer things they're doing.  The console also provides tools
 console.log and debugger that give programmers the ability to interrogate programs a they
 run.  
@@ -50,7 +50,7 @@ Create a For Loop that outputs the following string for each piece of fruit in t
 ```js
 var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 for (i = 0; i < foods[0].length; i+=1) {
-  console.log(foods[0][i]);
+  console.log("I want to eat a " + foods[0][i]);
 }
 ```
 ### Question #4
@@ -105,10 +105,10 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 
 Your Answer:
 ```js
+//global:
 instructor = "Adrian";
-function nameCalling() {
+//local:
   var instructor = "Adrian";
-}
 ```
 
 ## Objects and Functions
@@ -134,7 +134,9 @@ All callbacks use function references.
 ```
 ### Question #9
 
-Using the object literal notation, Define an object called student and give it the properties (your attributes) of name, age, and a method sayHello, that outputs "Hi, my name is [your_name]".
+Using the object literal notation, Define an object called student and give it
+the properties (your attributes) of name, age, and a method sayHello,
+that outputs "Hi, my name is [your_name]".
 
 Your Answer:
 ```js
