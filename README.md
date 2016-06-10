@@ -62,7 +62,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-foods[1][0]
+var pizza = foods[1][0]
 ```
 
 ## Scope/Context/Closures
@@ -144,7 +144,7 @@ var student = {
   name: "Kevin Golden",
   age: 58,
   sayHello: function() {
-    console.log("Hi, my name is " + student.name)
+    console.log("Hi, my name is " + this.name)
   }
 }
 ​
