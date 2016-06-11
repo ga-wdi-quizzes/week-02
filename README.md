@@ -96,7 +96,21 @@ Describe the rules of scope in JavaScript.
 
 Your Answer:
 ```text
+- A function bottles up its scope when its declaration is evaluated.
+- A variable defined exclusively within the function cannot be accessed from outside the function or within other functions.
 ```
+
+- Scope
+    + The current context of execution.
+    + The context in which values and expressions are "visible," or can be referenced.
+- this
+    + A variable that is automatically set when a function is invoked.
+    + Its value depends on how a function is invoked. 
+    + It has some differences between strict mode and non-strict mode.
+- refs:
+    - [https://developer.mozilla.org/en-US/docs/Glossary/Scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
+    - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+    - [http://javascriptplayground.com/blog/2012/04/javascript-variable-scope-this/](http://javascriptplayground.com/blog/2012/04/javascript-variable-scope-this/)
 
 ### Question #6
 
@@ -107,7 +121,20 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+// Define an object and store it in a variable `pizza`.
+var pizza = {
+    // A temperature.
+    temperature: 70,
+    // Sets the pizza's temperature to be 300
+    bake: function() {
+        this.temperature = 300;
+    }
+}
+
+// Test
+console.log( "Before baking: %sF", pizza.temperature ); //=>70
+pizza.bake();
+console.log( "After baking:  %sF", pizza.temperature ); //=>300
 ```
 
 ### Question #7
@@ -116,7 +143,15 @@ Using a 'for' loop, iterate over an array of numbers in JavaScript, printing eac
 
 Your Answer:
 ```js
-// write code here
+var numbers = [49, 46, 67, 22, 8, 62, 72, 84, 24, 87];
+var i;
+for ( i = 0, len = numbers.length; i < len; i++ ) {
+    console.log( numbers[i] );
+}
+
+numbers.forEach( function( number ) {
+    console.log( number );
+});
 ```
 
 ### Question #8
@@ -131,7 +166,30 @@ $("button").on("click", function(event){
 
 Your Answer:
 ```js
-// write code here
+// Get references to all the button elements in the document.
+var elems = document.querySelectorAll('button');
+
+// Iterate over the array of the button elements.
+var i = 0;
+var len = elems.length;
+for (; i < len; i++) {
+    // Add a click listener on each element in the list.
+    elems[i].addEventListener('click', function(event){ 
+        // Set to red the text color of the clicked element.
+        event.target.style.color = 'red';
+    });
+}
+```
+
+Experiment:
+```js
+// Change all the images to Masa.
+var elems = document.querySelectorAll('img')
+var i = 0;
+var len = elems.length;
+for (; i < len; i++) {
+    elems[i].setAttribute('src', 'http://mnishiguchi.com/images/masatoshi_chinatown_300.png')
+}
 ```
 
 ## Objects and Functions
