@@ -199,15 +199,31 @@ for (; i < len; i++) {
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
+// Declaring a function
+function doNothing() { 
+    console.log( "I am doing nothing" ) 
+}
 
+// Calling a function
+doNothing();
+
+// Referencing a function
+setTimeout( doNothing, 1000 );
 ```
+
 ### Question #10
 
 Using the object literal notation, Define an object called student and give it the properties (your attributes) of name, age, and a method sayHello, that outputs "Hi, my name is [your_name]".
 
 Your Answer:
 ```js
-// write code here
+var student = {
+    name: "Masatoshi Nishiguchi",
+    age: 39,
+    sayHello: function() {
+        console.log("Hi, my name is %s.", this.name)
+    }
+}
 ```
 
 ## Callbacks
@@ -220,5 +236,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
