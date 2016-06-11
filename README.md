@@ -17,43 +17,75 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] String
-[] Boolean
-[] Undefined
-[] NaN
-[] Number
-[] Array
-[] Null
+[x] String
+[x] Boolean
+[x] Undefined
+[] NaN    //=> Number
+[x] Number
+[] Array  //=> Object
+[x] Null
 ```
+
+ref: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+
+```
+typeof []  //=>"object"
+typeof NaN //=>"number"
+```
+
 
 ## Question #2
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-
+- REPL stands for read–eval–print loop.
+- REPL is a simple, interactive computer programming environment that takes single user inputs, evaluates them, and returns the result to the user
+- REPL is important for us because it allows us to:
+  + practice using a programming language
+  + do experiments with code
+  + do a simple unit test where we type a program, give it a input and check what it outputs
+  + do mathematical calculations
 ```
+
+ref: [https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)
+
+
 ### Question #3
 
 **Given the Following Array**
 
-var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
+```js
+var foods = [
+    ["apple","banana","strawberry"], 
+    ["pizza","fries","hamburger"] 
+];
+```
 
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+var i, j;
+for ( i = 0; i < foods.length; i++ ) {
+    for ( j = 0; j < foods[i].length; j++ ) {
+        console.log( "I want to eat a %s", foods[i][j] );
+    }
+}
 ```
 ### Question #4
 
 **Given the Following Array**
 
-var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
-
+```js
+var foods = [ 
+    ["apple","banana","strawberry"], 
+    ["pizza","fries","hamburger"] 
+];
+```
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+var pizza = foods[1][0];
 ```
 
 ## Scope/Context/Closures
