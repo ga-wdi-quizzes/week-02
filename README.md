@@ -17,21 +17,21 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] String
-[] Boolean
-[] Undefined
+[x] String
+[x] Boolean
+[x] Undefined
 [] NaN
-[] Number
+[x] Number
 [] Array
-[] Null
+[x] Null
 ```
 
 ## Question #2
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
-```text
-
+```
+read-eval-print-loop - Allows you to test certain functions and pieces of your code by evaluating it and producing a result - like your console.
 ```
 ### Question #3
 
@@ -42,7 +42,9 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+for (var i =0; i < foods[0].length; i++){
+  console.log("I want to eat a " + foods[0][i])
+}
 ```
 ### Question #4
 
@@ -53,7 +55,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+foods[1][0]
 ```
 
 ## Scope/Context/Closures
@@ -63,7 +65,8 @@ How would I go about accessing the string "pizza" in the above array?
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+```
+Scope is what a variable/function can see from a certain line of code.
 ```
 
 ### Question #6
@@ -75,7 +78,13 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+var pizza = {
+  temperature: "70",
+  bake: function(){
+    return this.temperature = "300"
+  }
+}  
+  pizza.bake();
 ```
 
 ### Question #7
@@ -84,7 +93,9 @@ Using a 'for' loop, iterate over an array of numbers in JavaScript, printing eac
 
 Your Answer:
 ```js
-// write code here
+for (var i = 0; i < array.length; i++){
+  console.log(array[i]);
+}
 ```
 
 ### Question #8
@@ -99,7 +110,11 @@ $("button").on("click", function(event){
 
 Your Answer:
 ```js
-// write code here
+var el = document.querySelectorAll("button")
+el.addEventListener("click", function(event){
+  el.style['color'] = 'red';
+})
+
 ```
 
 ## Objects and Functions
@@ -109,7 +124,20 @@ Your Answer:
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
+Calling a funcion = myFunction()  - When you call a function, the function runs instantly.
+Referencing a function = myFunction; - Leaving the () off enables you to reference the function without it running until you want it to.
 
+ex.
+var x= 3
+myFunction(){
+  x + 5
+}
+myFunction() // x will equal 8.
+
+newFunction(){
+  x + 3;
+  myFunction;
+} x will equal 11 when you call newFunction.
 ```
 ### Question #10
 
@@ -117,7 +145,14 @@ Using the object literal notation, Define an object called student and give it t
 
 Your Answer:
 ```js
-// write code here
+var student = {
+  Name: "Adina",
+  Age: "26",
+  sayHello: function(){
+    console.log("Hi, my name is " + student.Name)
+  }
+}
+student.sayHello()
 ```
 
 ## Callbacks
@@ -128,7 +163,7 @@ Your Answer:
 
 Select all that apply:
 ```
-[] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
+[X] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[X] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
