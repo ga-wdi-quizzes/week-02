@@ -17,12 +17,12 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] String
-[] Boolean
+[x] String
+[x] Boolean
 [] Undefined
 [] NaN
-[] Number
-[] Array
+[x] Number
+[x] Array
 [] Null
 ```
 
@@ -43,6 +43,9 @@ Create a For Loop that outputs the following string for each piece of fruit in t
 
 ```js
 // write code here
+for (var i = 0; i < foods[0].length; i++) {
+  console.log("I want to eat a " + foods[0][i]);
+}
 ```
 ### Question #4
 
@@ -53,7 +56,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+var notDominos = foods[1][0];
 ```
 
 ## Scope/Context/Closures
@@ -85,6 +88,10 @@ Using a 'for' loop, iterate over an array of numbers in JavaScript, printing eac
 Your Answer:
 ```js
 // write code here
+var arrayOfNums = [1,2,3,4,5,6,7,8,9,8.1,7.2,6.3,5.4,4.5,3.6,2.7,1.8,0.9];
+for (var i = 0; i < arrayOfNums.length; i++) {
+  console.log(arrayOfNums[i].toString());
+}
 ```
 
 ### Question #8
@@ -130,5 +137,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
