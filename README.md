@@ -31,7 +31,7 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-
+A REPL is a **R**ead-**E**val-**P**rint **L**oop
 ```
 ### Question #3
 
@@ -88,7 +88,7 @@ function foo2() {
 function foo3() {
   var i0; // overrides the "globalness" of i0 within foo3 only
 }
-
+```
 
 ```text
 For variables, placement is important. 
@@ -101,11 +101,14 @@ function foo4() {
 } 
 ```
 ```text 
-However, if a variable is used without being declared, such as `i5 = 5;` without a `var i5;` before, it becomes global. 
+However, if a variable is used without being declared, such as `i5 = 5;` 
+without a `var i5;` before, it becomes global. 
 
-Also, a function declared with `function foo5() {}` is immediately "hoisted" to the top of the file, so that it is visible throughout.
+Also, a function declared with `function foo5() {}` is immediately "hoisted"
+to the top of the file, so that it is visible throughout.
 
-That is not true of functions defined in the form `var foo6 = function(a,b) {}`. They are not hoisted but "remain where they are". 
+That is not true of functions defined in the form `var foo6 = function(a,b) {}`.
+They are not hoisted but "remain where they are". 
 ```
 ### Question #6
 
