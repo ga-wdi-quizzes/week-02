@@ -30,9 +30,11 @@ Select all that apply:
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
-```text
-A REPL is a **R**ead-**E**val-**P**rint **L**oop
-```
+
+A REPL is a **R**ead-**E**val-**P**rint **L**oop. Iy It reads code input to it, evaluates it,
+prints the results, and loops back for more. Developers can use it for rapid prototyping, experiments
+with various changes. It can be used for debugging to look at various values. 
+
 ### Question #3
 
 **Given the Following Array**
