@@ -157,7 +157,7 @@ $("button").on("click", function(event){
 Your Answer:
 ```js
 // write code here
-document.getElementsByTagName("button")
+document.getElementsByTagName("button").this.style.color = 'red';
 ```
 
 ## Objects and Functions
