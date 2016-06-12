@@ -111,6 +111,9 @@ to the top of the file, so that it is visible throughout.
 
 That is not true of functions defined in the form `var foo6 = function(a,b) {}`.
 They are not hoisted but "remain where they are". 
+
+I could probably continue with this, but this is already way too long for the 
+scope of a quiz.
 ```
 ### Question #6
 
@@ -154,6 +157,7 @@ $("button").on("click", function(event){
 Your Answer:
 ```js
 // write code here
+document.getElementsByTagName("button")
 ```
 
 ## Objects and Functions
@@ -163,8 +167,32 @@ Your Answer:
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
+Calling a function is what is probably thought of as the typical use of a function. The code "calls"s function, possibly with some arguments, it does something, and it possibly returns a value.
 
+Calling a function involves using parentheses, containing the arguments passed to the function (if any).
+
+For instance,
 ```
+```js
+function advancedMath {
+  var sum;
+  sum = 1 + 1;
+  return sum;
+}
+
+var myPhdThesis = advancedMath;
+```
+```text
+Referencing a function, though, creates a pointer to a function, to use old terminology. It involves just the name of the function, no parentheses or arguments. 
+```
+```js
+function hideIt() {
+  $(this).hide();
+}
+
+$("p").ciick(hideIt);
+```
+
 ### Question #10
 
 Using the object literal notation, Define an object called student and give it the properties (your attributes) of name, age, and a method sayHello, that outputs "Hi, my name is [your_name]".
@@ -187,7 +215,7 @@ var student = {
 
 Select all that apply:
 ```
-[] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
+[x] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
 [x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
