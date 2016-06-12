@@ -17,12 +17,12 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] String
-[] Boolean
+[x] String
+[x] Boolean
 [] Undefined
 [] NaN
-[] Number
-[] Array
+[x] Number
+[x] Array
 [] Null
 ```
 
@@ -30,9 +30,11 @@ Select all that apply:
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
-```text
 
-```
+A REPL is a **R**ead-**E**val-**P**rint **L**oop. Iy It reads code input to it, evaluates it,
+prints the results, and loops back for more. Developers can use it for rapid prototyping, experiments
+with various changes. It can be used for debugging to look at various values. 
+
 ### Question #3
 
 **Given the Following Array**
@@ -43,6 +45,9 @@ Create a For Loop that outputs the following string for each piece of fruit in t
 
 ```js
 // write code here
+for (var i = 0; i < foods[0].length; i++) {
+  console.log("I want to eat a " + foods[0][i]);
+}
 ```
 ### Question #4
 
@@ -53,7 +58,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+var notDominos = foods[1][0];
 ```
 
 ## Scope/Context/Closures
@@ -64,8 +69,52 @@ Describe the rules of scope in JavaScript.
 
 Your Answer:
 ```text
+The simplest way to look at it is variables are "in scope" within the functions where they are defined. 
+For instance,
+```
+```js
+var i0; // global variable, in scope everywhere, except where noted
+
+function foo1() {
+  var i1; // in scope for foo1 and bar1 only
+  function bar1() {
+  }
+}
+  
+function foo2() {
+  function bar2() {
+      var i2; // in scope for bar2 only
+  }
+}  
+
+function foo3() {
+  var i0; // overrides the "globalness" of i0 within foo3 only
+}
 ```
 
+```text
+For variables, placement is important. 
+```
+```js
+function foo4() {
+  function bar4() {
+  }
+  function i4; // only in scope in foo4, after the declaration. not in scope in bar4 
+} 
+```
+```text 
+However, if a variable is used without being declared, such as `i5 = 5;` 
+without a `var i5;` before, it becomes global. 
+
+Also, a function declared with `function foo5() {}` is immediately "hoisted"
+to the top of the file, so that it is visible throughout.
+
+That is not true of functions defined in the form `var foo6 = function(a,b) {}`.
+They are not hoisted but "remain where they are". 
+
+I could probably continue with this, but this is already way too long for the 
+scope of a quiz.
+```
 ### Question #6
 
 Define an object and store it in a variable `pizza`. The object should have 2
@@ -75,7 +124,11 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+
+var pizza = {
+  temperature : 70,
+  bake : function() {this.temperature = 300;}
+}
 ```
 
 ### Question #7
@@ -85,6 +138,10 @@ Using a 'for' loop, iterate over an array of numbers in JavaScript, printing eac
 Your Answer:
 ```js
 // write code here
+var arrayOfNums = [1,2,3,4,5,6,7,8,9,8.1,7.2,6.3,5.4,4.5,3.6,2.7,1.8,0.9];
+for (var i = 0; i < arrayOfNums.length; i++) {
+  console.log(arrayOfNums[i].toString());
+}
 ```
 
 ### Question #8
@@ -100,6 +157,7 @@ $("button").on("click", function(event){
 Your Answer:
 ```js
 // write code here
+document.getElementsByTagName("button").this.style.color = 'red';
 ```
 
 ## Objects and Functions
@@ -109,8 +167,32 @@ Your Answer:
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
+Calling a function is what is probably thought of as the typical use of a function. The code "calls"s function, possibly with some arguments, it does something, and it possibly returns a value.
 
+Calling a function involves using parentheses, containing the arguments passed to the function (if any).
+
+For instance,
 ```
+```js
+function advancedMath {
+  var sum;
+  sum = 1 + 1;
+  return sum;
+}
+
+var myPhdThesis = advancedMath;
+```
+```text
+Referencing a function, though, creates a pointer to a function, to use old terminology. It involves just the name of the function, no parentheses or arguments. 
+```
+```js
+function hideIt() {
+  $(this).hide();
+}
+
+$("p").ciick(hideIt);
+```
+
 ### Question #10
 
 Using the object literal notation, Define an object called student and give it the properties (your attributes) of name, age, and a method sayHello, that outputs "Hi, my name is [your_name]".
@@ -118,6 +200,11 @@ Using the object literal notation, Define an object called student and give it t
 Your Answer:
 ```js
 // write code here
+var student = {
+  name : "Arthur Adams",
+  age : 0x31,
+  sayHello : function() { console.log( "Hi, my name is " + this.name ); }
+}
 ```
 
 ## Callbacks
@@ -128,7 +215,7 @@ Your Answer:
 
 Select all that apply:
 ```
-[] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
+[x] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
