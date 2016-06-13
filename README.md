@@ -60,7 +60,7 @@ How would I go about accessing the string "pizza" in the above array?
 var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 for (var i = 0; i < foods[1].length; i++) {
 }
-console.log(foods[1][1]);
+console.log(foods[1][0]);
 ```
 
 ## Scope/Context/Closures
@@ -86,7 +86,7 @@ Your Answer:
 var pizza = {
     temp: 70,
     bake: function (newTemp) {
-        return this.temp = newTemp;
+    this.temp = newTemp;
     }
 };
 console.log(pizza.bake(300));
@@ -159,7 +159,7 @@ console.log(student.sayHello());
 
 Select all that apply:
 ```
-[x] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
+[] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
 [x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
