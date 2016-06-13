@@ -19,7 +19,7 @@ Select all that apply:
 ```
 [X] String
 [X] Boolean
-[] Undefined
+[X] Undefined
 [] NaN
 [X] Number
 [] Array
@@ -43,12 +43,9 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
 
-
-For i in var foods {
-  i = 0
-  "I want to eat " foods
+for i in foods (){
+  i <6, i++, "I want to eat a " + i + "."
 }
 
 
@@ -75,7 +72,9 @@ console.log[1][0]
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+```
+Scope is what can be "seen" by JavaScript code and executed or otherwise impact, the triangle of view. A child function can impact a parent while the child function's value could not impact a function outside of the parent.
+
 ```
 
 ### Question #6
@@ -87,6 +86,18 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
+An object is a one or more collection of values with key value pairs e.g. fruit [apple, banana]
+
+var pizza = [ ["temperature"]; [70], ]
+
+function bake(){
+  for temperature <300 {
+    temperature.push 1++
+  }
+}
+
+**note for self: look up/try this, not sure it will work as written***
+
 // write code here
 ```
 
@@ -97,6 +108,14 @@ Define a global variable instructor and set it equal to your Squad Instructor's 
 Your Answer:
 ```js
 // write code here
+
+var instructor = "Jessie"
+
+function x (){
+  var instructor = "Jessie"
+}
+
+
 ```
 
 ## Objects and Functions
@@ -106,7 +125,9 @@ Your Answer:
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
+Calling a function provides a value based on the function executing.
 
+Referencing a function, I'm not sure based on looking online but it seems like it might a function that could be called but isn't.
 
 
 ```
@@ -117,6 +138,17 @@ Using the object literal notation, Define an object called student and give it t
 Your Answer:
 ```js
 // write code here
+
+var student = {
+  firstName: "Michael",
+  lastName: "Holzheimer",
+  age:29,
+
+  function sayHello(){
+    "Hi, my name is " + firstName + " " + lastName "."
+  } 
+}
+
 ```
 
 ## Callbacks
