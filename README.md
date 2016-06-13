@@ -17,13 +17,13 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] String
-[] Boolean
-[] Undefined
+[x] String
+[x] Boolean
+[x] Undefined
 [] NaN
-[] Number
-[] Array
-[] Null
+[x] Number
+[x] Array
+[x] Null
 ```
 
 ## Question #2
@@ -31,7 +31,7 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-
+A REPL is a read-evaluate-print loop, and it is important for developers as it aids in finding 'bugs' (or debugging) within large sections of code. Otherwise, manual or visual scanning of the code for bugs would be cumbersome and time-consuming.
 ```
 ### Question #3
 
@@ -42,7 +42,10 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+
+//for(var i = 0;  { (coming back to this)
+//console.log( "I want to eat a " + fruit..);
+}
 ```
 ### Question #4
 
@@ -53,7 +56,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+var pizza = ... //(coming back)
 ```
 
 ## Scope/Context/Closures
@@ -63,7 +66,8 @@ How would I go about accessing the string "pizza" in the above array?
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+```
+rules of scope for Javascript are complicated...it is the context of the code which can be global or local. It is determined by the accessibility of variables and functions and determining when and where they ARE functional within the context of the code...ish.
 ```
 
 ### Question #6
@@ -75,7 +79,8 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+
+
 ```
 
 ### Question #7
