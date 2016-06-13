@@ -17,13 +17,13 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] String
-[] Boolean
-[] Undefined
+[X] String
+[X] Boolean
+[X] Undefined
 [] NaN
-[] Number
-[] Array
-[] Null
+[X] Number
+[X] Array
+[X] Null
 ```
 
 ## Question #2
@@ -31,7 +31,8 @@ Select all that apply:
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
 ```text
-
+  Read -Eval -Print -Loop
+  it enables developers to evaluate their code without compiling
 ```
 ### Question #3
 
@@ -42,7 +43,9 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+for (var i = 0; i < 3;i++){
+  return "I want to eat a" +foods[0][i];
+}
 ```
 ### Question #4
 
@@ -53,6 +56,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
+    return foods[1][0];
 // write code here
 ```
 
@@ -64,6 +68,9 @@ Describe the rules of scope in JavaScript.
 
 Your Answer:
 ```text
+Variables declared inside a function can only be accessed by that function.
+Global Variables can be accessed throughout the entire js file.
+
 ```
 
 ### Question #6
@@ -75,6 +82,12 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
+var pizza = {
+  temp:70,
+  bake: function(){
+    pizza.temp = 300;
+  }
+}
 // write code here
 ```
 
@@ -84,6 +97,9 @@ Using a 'for' loop, iterate over an array of numbers in JavaScript, printing eac
 
 Your Answer:
 ```js
+for(var k in array){
+  console.log(array[key])
+}
 // write code here
 ```
 
@@ -95,10 +111,18 @@ Write the vanilla JS equivalent of the following jQuery code:
 $("button").on("click", function(event){
   $(event.target).css('color', 'red')
 })
+
+
 ```
 
 Your Answer:
 ```js
+function $(selector){    //function $ is defined and takes one argument the selctor $("button" <-- selctor)
+  var el = document.querySelectorAll(selector) //var el selects every instance of that selector on the page
+  el.on = function( eventName, callback ){ //el.on takes two arguments the eventName "click" and the callback function ...
+    
+  }
+
 // write code here
 ```
 
@@ -109,6 +133,8 @@ Your Answer:
 What are the differences between calling and referencing a function? Please provide examples of each.
 
 ```text
+  calling a function is
+  referencing a function is
 
 ```
 ### Question #10
@@ -117,6 +143,15 @@ Using the object literal notation, Define an object called student and give it t
 
 Your Answer:
 ```js
+  var student = {
+      properties = {
+        name:"Mr.Green",
+        age: 200,
+        sayHello: function(){
+          return "Hi, my name is " +student.properties[name];
+        }
+      }
+  }
 // write code here
 ```
 
@@ -130,5 +165,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[X] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
