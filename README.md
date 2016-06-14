@@ -17,20 +17,20 @@ the square brackets (for multiple-choice questions).
 
 Select all that apply:
 ```
-[] String
-[] Boolean
-[] Undefined
+[x] String
+[x] Boolean
+[x] Undefined
 [] NaN
-[] Number
+[x] Number
 [] Array
-[] Null
+[x] Null
 ```
 
 ## Question #2
 
 Explain what is a REPL, and why is it important for us as developers and help with debugging?
 
-```text
+Read-Eval-Print-Loop  Read accepts an expression and parses it into a data structure in memory. Eval takes the interanal data structure and evaluates it. Print prints the results of the eval. and loop returns to read. The REPL gives you a way to run JavaScript interactively and see the results. You can just run parts of you code to try it out and receive immediate feedback regarding syntax and results.
 
 ```
 ### Question #3
@@ -42,7 +42,12 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 Create a For Loop that outputs the following string for each piece of fruit in the console. "I want to eat a [fruit]"
 
 ```js
-// write code here
+
+for (var i = 0; i < 2; i++) {
+  for (var j = 0; j < 3; j++) {
+  console.log("I want to eat a "+foods[i][j])
+  }
+}
 ```
 ### Question #4
 
@@ -53,7 +58,7 @@ var foods = [ ["apple","banana","strawberry"], ["pizza","fries","hamburger"] ];
 How would I go about accessing the string "pizza" in the above array?
 
 ```js
-// write code here
+var pizza = foods[1][0]
 ```
 
 ## Scope/Context/Closures
@@ -63,7 +68,9 @@ How would I go about accessing the string "pizza" in the above array?
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+
+A variable's scope refers to the parts of the code from which the variable can be "seen" and used, or to the other variables and functions it can "see". Regardless of where you call a function, it will always have access to the same variables and other functions it did when you first declared it. When a function is declared it "lets in" all the variables in its scope, and then closes itself up. So sometimes the results after redeclaring a variable and changing it's value will not be what you expect if it is not within the scope of the function. In general:
+JavaScript has 2 scopes - global and local. Generally any variable declared outside of a function is global and accessable from anywhere in your code. Each function has it's own scope and any varialble declared within a function is accessible from that function and any nested functions.
 ```
 
 ### Question #6
@@ -75,7 +82,12 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+var newTemp = [];
+var pizza = {temperature:70, method:"bake"};
+setTemp (pizza);
+function setTemp (newTemp) {
+newTemp.temperature = 300;
+}
 ```
 
 ### Question #7
@@ -84,7 +96,19 @@ Using a 'for' loop, iterate over an array of numbers in JavaScript, printing eac
 
 Your Answer:
 ```js
-// write code here
+var arrayNums = [1,2,3,4,5,6];
+
+for (var i = 0; i < 6; i++) {
+  console.log(arrayNums[i]);
+}
+
+or
+
+var arrayNums = [1,2,3,4,5,6];
+
+for (var i = 0; i < arrayNums.length; i++) {
+  console.log(arrayNums[i]);
+}
 ```
 
 ### Question #8
@@ -99,7 +123,12 @@ $("button").on("click", function(event){
 
 Your Answer:
 ```js
-// write code here
+
+document.getElementById("button").addEventListener("click", function(){
+   document.getElementById('button').style.color = "red";
+});
+
+
 ```
 
 ## Objects and Functions
@@ -108,7 +137,19 @@ Your Answer:
 
 What are the differences between calling and referencing a function? Please provide examples of each.
 
-```text
+function foo() {
+  alert('foo!');
+}
+You can refer to that function like this:
+foo
+And here is how to call (execute) the function:
+foo()
+For example, jQuery's getJSON method allows you to specify a function to be executed once the operation is complete. you really just need a function reference:
+
+$.getJSON( "url string", {data:'some data here'}, foo );
+a reference is passed to the function. It won't execute until it's called by jQuery.
+
+if you put foo() it would execute immediately and that is not what you want.
 
 ```
 ### Question #10
@@ -117,7 +158,16 @@ Using the object literal notation, Define an object called student and give it t
 
 Your Answer:
 ```js
-// write code here
+
+var student = function () {
+	return {
+       name: "Mara Sanders",
+       age: "29+",
+       method : function sayHello () {
+         console.log ("Hi, my name is"+student.name);
+       }  
+    };
+
 ```
 
 ## Callbacks
@@ -130,5 +180,5 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
